@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Albergue Municipal de Calzadilla de los Hermanillos (Albergue De San Bartolomé)"
+            android:layout_alignTop="@+id/albtypeImg"
+            android:layout_toRightOf="@+id/albtypeImg"
+            android:layout_toEndOf="@+id/albtypeImg"/>
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:text="email"
+            android:layout_alignTop="@+id/emailImg"
+            android:layout_toRightOf="@+id/emailImg"
+            android:layout_toEndOf="@+id/emailImg"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/linkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:text="link"
+
+            android:layout_alignTop="@+id/linkImg"
+            android:layout_toRightOf="@+id/linkImg"
+            android:layout_toEndOf="@+id/linkImg"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/telText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:text="tel"
+            android:layout_alignBottom="@+id/telImg"
+            android:layout_toRightOf="@+id/telImg"
+            android:layout_toEndOf="@+id/telImg"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:text="address"
+            android:layout_alignBottom="@+id/addressImg"
+            android:layout_toRightOf="@+id/addressImg"
+            android:layout_toEndOf="@+id/addressImg" />
+
+        <TextView
+            android:id="@+id/seasonText"
+            android:layout_width="60sp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Open all year"
+            android:layout_alignTop="@+id/timeText"
+            android:layout_toRightOf="@+id/timeText"
+            android:layout_toEndOf="@+id/timeText"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal"
+            android:text="1100-2200"
+            android:layout_alignTop="@+id/openImg"
+            android:layout_toRightOf="@+id/openImg"
+            android:layout_toEndOf="@+id/openImg" />
+
+        <TextView
+            android:id="@+id/bednrText"
+            android:layout_width="19sp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal"
+            android:text="110"
+            android:layout_alignTop="@+id/bedImg"
+            android:layout_toRightOf="@+id/bedImg"
+            android:layout_toEndOf="@+id/bedImg"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="19sp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal"
+            android:text="30"
+            android:layout_alignTop="@+id/priceImg"
+            android:layout_toRightOf="@+id/priceImg"
+            android:layout_toEndOf="@+id/priceImg"
+            android:layout_marginLeft="5dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:id="@+id/albtypeImg"
+            android:src="@drawable/cityic_mbed"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/linkImg"
+            android:src="@drawable/albic_link"
+            android:layout_below="@+id/emailText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bedImg"
+            android:src="@drawable/albic_bed"
+            android:layout_alignTop="@+id/seasonText"
+            android:layout_toRightOf="@+id/seasonText"
+            android:layout_toEndOf="@+id/seasonText" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/emailImg"
+            android:src="@drawable/albic_email"
+            android:layout_below="@+id/nameText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/telImg"
+            android:src="@drawable/albic_tel"
+            android:layout_below="@+id/linkText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/addressImg"
+            android:src="@drawable/albic_address"
+            android:layout_below="@+id/telText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/openImg"
+            android:src="@drawable/albic_open"
+            android:layout_below="@+id/addressText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="10dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/priceImg"
+            android:src="@drawable/albic_price"
+            android:layout_alignTop="@+id/bednrText"
+            android:layout_toRightOf="@+id/bednrText"
+            android:layout_toEndOf="@+id/bednrText"
+            />
+
+
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:id="@+id/horizontalScrollView2"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/kitchenImg"
+                android:src="@drawable/albic_kitchen"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/wmImg"
+                android:src="@drawable/albic_wm"
+                android:layout_toRightOf="@+id/kitchenImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/dryerImg"
+                android:src="@drawable/albic_dryer"
+                android:layout_toRightOf="@+id/wmImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/internetImg"
+                android:src="@drawable/albic_internet"
+                android:layout_toRightOf="@+id/dryerImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/wifiImg"
+                android:src="@drawable/albic_wifi"
+                android:layout_toRightOf="@+id/internetImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/vendingmImg"
+                android:src="@drawable/albic_vendm"
+                android:layout_toRightOf="@+id/wifiImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/bikeImg"
+                android:src="@drawable/albic_bike"
+                android:layout_toRightOf="@+id/vendingmImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/credImg"
+                android:src="@drawable/cityic_pilgromof"
+                android:layout_toRightOf="@+id/bikeImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="33dp"
+                android:id="@+id/bfImg"
+                android:src="@drawable/albic_bf"
+                android:layout_toRightOf="@+id/credImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:id="@+id/bfText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_toRightOf="@+id/bfImg"
+                android:layout_marginLeft="5dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/mealImg"
+                android:src="@drawable/albic_meal"
+                android:layout_toRightOf="@+id/bfText"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:id="@+id/mealText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_toRightOf="@+id/mealImg"
+                android:layout_marginLeft="5dp" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/wallet_holo_blue_light"
+            android:onClick="albergueShareOnFB"
+            android:text="  Check In From Here On Facebook  "
+            style="@style/com_facebook_button"
+            android:typeface="sans"
+            android:textAppearance="@style/ExpandedAppBar"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

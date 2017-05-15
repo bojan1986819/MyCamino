@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1388d0"
+        android:id="@+id/topBar">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Add new entry"
+            android:textColor="#ffffff"
+            android:shadowColor="#000000"
+            android:shadowRadius="4" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="date"
+            android:textColor="#ffffff"
+            android:shadowColor="#000000"
+            android:shadowRadius="4"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/topLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject: "
+                android:id="@+id/tvTopic"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etTopic"
+                android:layout_marginLeft="10dp"
+                android:inputType="textCapSentences"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/middleLayout"
+            android:layout_below="@+id/topLayout"
+            android:background="#1388d0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write your Diary entry:"
+                android:id="@+id/tvText"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:shadowColor="#000000"
+                android:shadowRadius="4"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView3"
+            android:layout_above="@+id/bottomBar"
+            android:layout_below="@+id/middleLayout">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etText"
+                    android:inputType="textCapSentences"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1388d0"
+            android:id="@+id/bottomBar"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/btnSave"
+                android:onClick="Save" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/btnCancel"
+                android:layout_alignParentEnd="true"
+                android:onClick="Close" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

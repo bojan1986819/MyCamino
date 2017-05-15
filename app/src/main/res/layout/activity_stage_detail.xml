@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/topImage"
+        android:scaleType="centerCrop"
+        android:background="#1388d0" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:textSize="24sp"
+        android:text="Santiago"
+        android:textColor="#ffffff"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        />
+
+    <TextView
+        android:id="@+id/kmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="25km"
+        android:layout_alignParentRight="true"
+        android:textColor="#ffffff"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/nameText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/altImage"
+                android:scaleType="fitXY"
+                android:src="@drawable/stg1altitude"
+                android:onClick="imageClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descText"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:id="@+id/separatorImageView"
+        android:background="#1388d0"
+        android:layout_below="@+id/scrollView"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Towns during stage:"
+        android:id="@+id/cityTitle"
+        android:layout_below="@+id/scrollView"
+        android:textColor="#ffffff"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"/>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/separatorImageView"
+        android:dividerHeight="2dp"
+        android:divider="@drawable/list_divider">
+    </ListView>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:id="@+id/address"
+        android:src="@drawable/sto"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="31dp"
+        android:id="@+id/kmpart"
+        android:src="@drawable/stagekm"
+        android:layout_alignBottom="@+id/address"
+        android:layout_toLeftOf="@+id/address"
+        android:layout_toStartOf="@+id/address" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:fab_colorNormal="#1388d0"
+        fab:fab_colorPressed="#1388d0"
+        fab:fab_colorRipple="#1388d0">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_map"
+            android:onClick="openMap"
+            fab:fab_size="mini"
+            fab:fab_label="Show Map"
+            fab:fab_colorNormal="#1388d0"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:onClick="openJournal"
+            fab:fab_size="mini"
+            fab:fab_label="Open MyDiary"
+            fab:fab_colorNormal="#1388d0" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"
+            android:onClick="openIconLegend"
+            fab:fab_size="mini"
+            fab:fab_label="Icon Legend"
+            fab:fab_colorNormal="#1388d0" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

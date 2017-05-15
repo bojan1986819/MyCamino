@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1388d0"
+            android:id="@+id/topLayout" >
+
+            <TextView
+                android:id="@+id/tvTopText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="MyDiary"
+                android:textColor="#ffffff"
+                android:shadowColor="#000000"
+                android:shadowRadius="4" />
+
+            <TextView
+                android:id="@+id/tvDateTop"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Date"
+                android:textColor="#ffffff"
+                android:shadowColor="#000000"
+                android:shadowRadius="4"
+                android:layout_below="@+id/tvTopText"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tvSubjectTop"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Subject"
+                android:textColor="#ffffff"
+                android:shadowColor="#000000"
+                android:shadowRadius="4"
+                android:layout_toRightOf="@+id/tvDateTop"
+                android:textAlignment="center"
+                android:layout_alignBottom="@+id/tvDateTop"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tvTextTop"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Entry"
+                android:textColor="#ffffff"
+                android:shadowColor="#000000"
+                android:shadowRadius="4"
+                android:layout_toRightOf="@+id/tvSubjectTop"
+                android:textAlignment="center"
+                android:layout_alignBottom="@+id/tvSubjectTop"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomLayout"
+            android:layout_below="@+id/topLayout"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Your Diary is empty"
+                android:id="@android:id/empty"
+                android:layout_alignParentEnd="false"
+                android:layout_centerHorizontal="true" />
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:dividerHeight="2dp"
+                android:divider="@drawable/list_divider" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:fab_colorNormal="#1388d0"
+        fab:fab_colorPressed="#1388d0"
+        fab:fab_colorRipple="#1388d0">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:onClick="AddEntry"
+            fab:fab_size="mini"
+            fab:fab_label="Write entry to your Diary"
+            fab:fab_colorNormal="#1388d0"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_save"
+            android:onClick="ExportDiary"
+            fab:fab_size="mini"
+            fab:fab_label="Export your Diary"
+            fab:fab_colorNormal="#1388d0" />
+
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

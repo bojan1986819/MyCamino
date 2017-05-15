@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Santiago"
+            android:id="@+id/cityNameText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="5km"
+            android:id="@+id/distText"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/distSoText"
+            android:layout_toStartOf="@+id/distSoText" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="200km"
+            android:id="@+id/distSoText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:id="@+id/pilgrimOfIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:id="@+id/mAlbergueIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/pilgrimOfIcon"
+                android:layout_toRightOf="@+id/pilgrimOfIcon"
+                android:layout_marginLeft="5sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/pAlbergueIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/mAlbergueIcon"
+                android:layout_toRightOf="@+id/mAlbergueIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/hAlbergueIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/pAlbergueIcon"
+                android:layout_toRightOf="@+id/pAlbergueIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/shopIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/hAlbergueIcon"
+                android:layout_toRightOf="@+id/hAlbergueIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/restaurantIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/shopIcon"
+                android:layout_toRightOf="@+id/shopIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/cafeIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/restaurantIcon"
+                android:layout_toRightOf="@+id/restaurantIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/waterIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/cafeIcon"
+                android:layout_toRightOf="@+id/cafeIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/pharIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/waterIcon"
+                android:layout_toRightOf="@+id/waterIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/hospitalIcon"
+                android:src="@drawable/cityic_hospital"
+                android:layout_alignTop="@+id/pharIcon"
+                android:layout_toRightOf="@+id/pharIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/bankIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/hospitalIcon"
+                android:layout_toRightOf="@+id/hospitalIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/busIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/bankIcon"
+                android:layout_toRightOf="@+id/bankIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/postIcon"
+                android:src="@drawable/cityic_mbed"
+                android:layout_alignTop="@+id/busIcon"
+                android:layout_toRightOf="@+id/busIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
