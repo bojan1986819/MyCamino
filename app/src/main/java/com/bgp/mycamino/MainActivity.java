@@ -1,9 +1,12 @@
 package com.bgp.mycamino;
 
+import android.*;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -22,6 +25,9 @@ import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.List;
+
+import hotchemi.android.rate.AppRate;
+import hotchemi.android.rate.OnClickButtonListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -92,6 +98,25 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        AppRate.with(this)
+                .setInstallDays(4) // default 10, 0 means install day.
+                .setLaunchTimes(10) // default 10
+                .setRemindInterval(2) // default 1
+                .setShowLaterButton(true) // default true
+                .setDebug(false) // default false
+                .setOnClickButtonListener(new OnClickButtonListener() { // callback listener.
+                    @Override
+                    public void onClickButton(int which) {
+                        Log.d(MainActivity.class.getName(), Integer.toString(which));
+                    }
+                })
+                .setTitle("Rate it on Play Store")
+                .setMessage("Dear fellow Pilgrim! If you think this app is helpful on your Camino, would you mind taking a moment to rate it? Thanks for your support! Buen Camino!")
+                .monitor();
+
+        // Show a dialog if meets conditions
+        AppRate.showRateDialogIfMeetsConditions(this);
     }
 
     @Override

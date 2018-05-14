@@ -48,6 +48,8 @@ public class AlberguesActivity extends ListActivity implements OnMapReadyCallbac
     private List<DBItem> mEntries;
     DBDataSource mDataSource;
     DBOpenHelper dbOpenHelper = null;
+    private static final int PERMS_REQUEST_CODE = 123;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +143,8 @@ public class AlberguesActivity extends ListActivity implements OnMapReadyCallbac
             mMap.setMyLocationEnabled(true);
             Toast.makeText(getApplicationContext(), "Please wait for Location", Toast.LENGTH_LONG).show();
         } else {
+            String[] permissions = new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION};
+            requestPermissions(permissions,PERMS_REQUEST_CODE);
             Snackbar.make(findViewById(android.R.id.content), "Permission is needed to be able to show your current location on the map", Snackbar.LENGTH_LONG)
                 .setActionTextColor(Color.RED)
                 .show();
